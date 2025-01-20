@@ -94,6 +94,7 @@ a:hover {
 }
 
 body {
+  overflow-x: hidden;
   background-color: var(--background-color);
   background-image:
   radial-gradient(circle at 50% -25%, #BCBDC0 -10%, transparent 20%),
@@ -114,8 +115,8 @@ body::before {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(44, 44, 44, 0.15); /* Light color for background text */
+  transform: translate(-50%, -40%);
+  color: rgba(44, 44, 44, 0.25); /* Light color for background text */
   z-index: -1; /* Ensure it stays behind other content */
   pointer-events: none; /* Prevent interaction with the background text */
   white-space: nowrap; /* Prevent text from wrapping */
