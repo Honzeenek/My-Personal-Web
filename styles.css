@@ -115,7 +115,7 @@ body::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgba(44, 44, 44, 0.1); /* Light color for background text */
+  color: rgba(44, 44, 44, 0.15); /* Light color for background text */
   z-index: -1; /* Ensure it stays behind other content */
   pointer-events: none; /* Prevent interaction with the background text */
   white-space: nowrap; /* Prevent text from wrapping */
