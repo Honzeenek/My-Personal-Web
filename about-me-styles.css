@@ -18,7 +18,14 @@ h1 {
   padding-top: 14rem;
   justify-content: center;
   font-size: 3em;
-  font-weight: 800;
+  font-weight: 700;
+}
+
+.me {
+  margin-left: 0.3em;
+  background: linear-gradient(45deg ,#48FF00, rgba(17, 218, 87, 0.72));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #subtitle {
@@ -52,7 +59,7 @@ a {
 }
 
 #about {
-  color: #00FFD5;
+  color: #58CC3C;
 }
 
 .btn::after {
@@ -110,14 +117,15 @@ a:hover {
 
 body {
   background-color: var(--background-color);
-  background-image:
-    radial-gradient(circle at 0% 25%, rgba(0, 214, 83, 0.2) 0%, transparent 20%),
-    radial-gradient(circle at -10% 60%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
-    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 45%);
+  background-image: radial-gradient(circle at 50% -25%, #BCBDC0 -10%, transparent 20%),
+  radial-gradient(circle at -10% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+  radial-gradient(circle at -15% 30%, rgba(0, 214, 83, 0.2) 0%, transparent 20%),
+  radial-gradient(circle at -20% 60%, #BCBDC0 -50%, transparent 20%),
+  radial-gradient(circle at 120% -20%, #334E58 0%, transparent 30%),
+  url('Noise & Texture.png'); /* Add the noise texture image */
   font-family: var(--font);
   color: var(--text);
 }
-
 
 nav {
   position: fixed;
@@ -141,17 +149,19 @@ nav {
 
 
 .nav-items {
+  background: rgba(44, 44, 44, 0.45);
   display: flex;
   gap: 1.8rem;
   align-items: center;
   border: solid 1px #3d3d3d;
-  padding: 0.5rem 1rem;
+  padding: 0.1em 1rem;
   border-radius: 1rem;
   transform: scale(0.8);
 
 }
 
 #logo {
+  border-radius: 1rem;
   font-weight: 800;
   font-size: 50px;
   position: sticky;
@@ -166,4 +176,33 @@ nav {
   border: solid 0px transparent;
   border-radius: 1rem;
   display: inline-block;
+}
+
+.paragraph {
+  display: flex;
+}
+
+.paragraph-list {
+  display: flex;
+  flex-wrap: wrap;
+  word-break: auto-phrase;
+  flex-direction: column;
+}
+
+#jan_palenik {
+  margin-top: 3rem;
+}
+
+.paragraph-list li {
+  margin: 0.6rem;
+}
+
+
+img {
+  grid-row: 1;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 7em 0em 25rem;
+  width: 20em;
 }

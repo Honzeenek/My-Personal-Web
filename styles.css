@@ -21,6 +21,10 @@ a {
   display: inline-block;
 }
 
+#home {
+
+}
+
 .btn {
   position: relative;
   font-size: 1.2rem;
@@ -92,13 +96,30 @@ a:hover {
 body {
   background-color: var(--background-color);
   background-image:
-    radial-gradient(circle at 0% 25%, rgba(0, 214, 83, 0.2) 0%, transparent 20%),
-    radial-gradient(circle at -10% 60%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
-    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 45%);
+  radial-gradient(circle at 50% -25%, #BCBDC0 -10%, transparent 20%),
+  radial-gradient(circle at -10% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+  radial-gradient(circle at -15% 30%, rgba(0, 214, 83, 0.2) 10%, transparent 20%),
+  radial-gradient(circle at -15% 60%, #BCBDC0 -20%, transparent 20%),
+  radial-gradient(circle at 120% -20%, #334E58 0%, transparent 30%),
+  url('Noise & Texture.png'); /* Add the noise texture image */
   font-family: var(--font);
   color: var(--text);
 }
 
+body::before {
+  font-family: Inter;
+  font-size: 20rem;
+  font-weight: 900;
+  content: "JAN PÁLENÍK";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(44, 44, 44, 0.1); /* Light color for background text */
+  z-index: -1; /* Ensure it stays behind other content */
+  pointer-events: none; /* Prevent interaction with the background text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
 
 nav {
   position: fixed;
@@ -122,11 +143,12 @@ nav {
 
 
 .nav-items {
+  background: rgba(44, 44, 44, 0.45);
   display: flex;
   gap: 1.8rem;
   align-items: center;
   border: solid 1px #3d3d3d;
-  padding: 0.5rem 1rem;
+  padding: 0.1em 1rem;
   border-radius: 1rem;
   transform: scale(0.8);
 
@@ -140,6 +162,7 @@ nav {
 }
 
 #scroll-to-top {
+  color: #58CC3C;
   font-size: 1.2rem;
   font-weight: 500;
   transition-duration: 0.3s;
