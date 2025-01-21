@@ -1,24 +1,23 @@
 /* Root styles */
 :root {
-  --text: #fff;
-  --background-color: #161616;
-  --font: 'Inter', sans-serif;
+    --text: #fff;
+    --background-color: #161616;
+    --font: 'Inter', sans-serif;
 }
 
 h1 {
-  font-size: 10rem;
-  font-weight: 900;
+    font-size: 10rem;
+    font-weight: 900;
 }
 
-p,
-a {
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition-duration: 0.3s;
-  padding: 10px;
-  border: solid 0px transparent;
-  border-radius: 1rem;
-  display: inline-block;
+.nav-a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition-duration: 0.3s;
+    padding: 10px;
+    border: solid 0px transparent;
+    border-radius: 1rem;
+    display: inline-block;
 }
 
 #home {
@@ -26,185 +25,277 @@ a {
 }
 
 .btn {
-  position: relative;
-  font-size: 1.2rem;
-  font-weight: 600;
-  background: #bcbdc0;
-  padding: 0.8rem 1.5rem;
-  border-radius: 1rem;
-  display: inline-block;
-  border: none;
-  outline: none;
-  color: #FFF;
-  cursor: pointer;
-  z-index: 0;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: #bcbdc0;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    display: inline-block;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    z-index: 0;
 }
 
 .btn::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #333;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
 }
 
-.btn::before {
-  content: "";
-  background: linear-gradient(
-          45deg,
-          #FF0000, #FF7300, #FFFB00, #48FF00,
-          #00FFD5, #002BFF, #FF00C8, #FF0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 600%;
-  z-index: -1;
-  width: calc(100% + 4px);
-  height:  calc(100% + 4px);
-  filter: blur(8px);
-  animation: glowing 20s linear infinite;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
-  opacity: 0;
+.btn:before {
+    content: "";
+    background: linear-gradient(
+            45deg,
+            #FF0000, #FF7300, #FFFB00, #48FF00,
+            #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
 }
 
 @keyframes glowing {
-  0% {background-position: 0 0;}
-  50% {background-position: 400% 0;}
-  100% {background-position: 0 0;}
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
 }
 
 .btn:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .btn:active:after {
-  background: transparent;
+    background: transparent;
 }
 
 a:hover {
-  transform: translate(0, -0.2em);
-  transition-timing-function: cubic-bezier(0.77,0,0.18,1);
-  border-radius: 1rem;
+    transform: translate(0, -0.2em);
+    transition-timing-function: cubic-bezier(0.77, 0, 0.18, 1);
+    border-radius: 1rem;
 }
 
 body {
-  overflow-x: hidden;
-  background-color: var(--background-color);
-  background-image:
-  radial-gradient(circle at 50% -25%, #BCBDC0 -10%, transparent 20%),
-  radial-gradient(circle at -10% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
-  radial-gradient(circle at -15% 30%, rgba(0, 214, 83, 0.2) 10%, transparent 20%),
-  radial-gradient(circle at -15% 60%, #BCBDC0 -20%, transparent 20%),
-  radial-gradient(circle at 120% -20%, #334E58 0%, transparent 30%),
-  url('Noise & Texture.png'); /* Add the noise texture image */
-  font-family: var(--font);
-  color: var(--text);
+    overflow-x: hidden;
+    background-color: var(--background-color);
+    background-image: radial-gradient(circle at 50% -25%, #BCBDC0 -10%, transparent 20%),
+    radial-gradient(circle at -10% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at -15% 30%, rgba(0, 214, 83, 0.2) 10%, transparent 20%),
+    radial-gradient(circle at -15% 60%, #BCBDC0 -20%, transparent 20%),
+    radial-gradient(circle at 120% -20%, #334E58 0%, transparent 30%),
+    url('Noise & Texture.png'); /* Add the noise texture image */
+    font-family: var(--font);
+    color: var(--text);
 }
 
 body::before {
-  font-family: Inter;
-  font-size: 20rem;
-  font-weight: 900;
-  content: "JAN PÁLENÍK";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -40%);
-  color: rgba(44, 44, 44, 0.25); /* Light color for background text */
-  z-index: -1; /* Ensure it stays behind other content */
-  pointer-events: none; /* Prevent interaction with the background text */
-  white-space: nowrap; /* Prevent text from wrapping */
+    font-family: Inter;
+    font-size: 20rem;
+    font-weight: 900;
+    content: "JAN PÁLENÍK";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    color: rgba(44, 44, 44, 0.25); /* Light color for background text */
+    z-index: -1; /* Ensure it stays behind other content */
+    pointer-events: none; /* Prevent interaction with the background text */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 nav {
-  position: fixed;
-  box-sizing: border-box;
-  display: flex;
-  top: 0;
-  align-items: center;
-  width: 100%;
-  padding: 3rem 6rem;
-  font-size: 17px;
-  left: 50%;
-  gap:  2rem;
-  transform: translateX(-50%);
-  justify-content: center; /* Changed to add space between items */
-  transition: opacity 0.3s ease-out;
+    position: fixed;
+    box-sizing: border-box;
+    display: flex;
+    top: 0;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 6rem;
+    font-size: 17px;
+    left: 50%;
+    gap: 2rem;
+    transform: translateX(-50%);
+    justify-content: center; /* Changed to add space between items */
+    transition: opacity 0.3s ease-out;
 }
 
 .nav-hidden {
-  opacity: 0; /* Class to hide the nav */
+    opacity: 0; /* Class to hide the nav */
+}
+
+.dropdown-content {
+    border: solid 0.1em #3d3d3d;
+    background-color: rgba(44, 44, 44, 0.45);
+    margin-top: 20rem;
+    position: absolute;
+    display: none;
+    width: 40%;
+    height: 120%;
+    z-index: 1;
+    border-radius: 1rem;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.icons {
+    margin-right: 1em;
+    padding: 1em;
+    border: solid 0.1em #3d3d3d;
+    border-radius: 0.7em;
+    justify-content: end;
+    background-color: rgba(42, 42, 42, 0.68);
+}
+
+.dropdown-Btn {
+
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    padding: 0;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
 }
 
 
 .nav-items {
-  background: rgba(44, 44, 44, 0.45);
-  display: flex;
-  gap: 1.8rem;
-  align-items: center;
-  border: solid 1px #3d3d3d;
-  padding: 0.1em 1rem;
-  border-radius: 1rem;
-  transform: scale(0.8);
+    background: rgba(44, 44, 44, 0.45);
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    border: solid 1px #3d3d3d;
+    padding: 0.1em 1rem;
+    border-radius: 1rem;
+    transform: scale(0.8);
 
 }
 
 #logo {
-  font-weight: 800;
-  font-size: 50px;
-  position: sticky;
-  transition: color;
+    font-weight: 800;
+    font-size: 50px;
+    position: sticky;
+    transition: color;
 }
 
 #scroll-to-top {
-  color: #58CC3C;
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition-duration: 0.3s;
-  padding: 10px;
-  border: solid 0px transparent;
-  border-radius: 1rem;
-  display: inline-block;
+    color: #58CC3C;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition-duration: 0.3s;
+    padding: 10px;
+    border: solid 0px transparent;
+    border-radius: 1rem;
+    display: inline-block;
 }
 
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
 #heading {
-  background-clip: text;
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  line-height: 60%;
+    background-clip: text;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    line-height: 60%;
 }
 
 #heading-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: last baseline;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
 }
+
 #heading-name {
-  margin-right: 0.2em;
-  font-size: 55px;
-  font-weight: 800;
+    margin-right: 0.2em;
+    font-size: 55px;
+    font-weight: 800;
 }
 
 #heading-bottom {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+    display: flex;
+    align-items: center; /* box-shadow: 0 2px 5px rgb(255, 255, 255); *//* box-shadow: 0 2px 5px rgb(255, 255, 255); */
+    gap: 2rem;
 }
 
 #heading-logo {
-  color: rgb(0, 214, 83);
-  filter: drop-shadow(#00d65273 0px 0px 10px);
+    color: rgb(0, 214, 83);
+    filter: drop-shadow(#00d65273 0px 0px 10px);
+}
+
+.paragraph {
+    display: flex;
+}
+
+.paragraph-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+#jan_palenik {
+    margin-top: 3rem;
+    color: white;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 0;
+}
+
+#undertitle {
+    margin-top: 0.3rem;
+    padding: 0;
+}
+
+.about-paragraph {
+    font-weight: 300;
+    color: rgb(218, 215, 215);
+}
+
+.paragraph-list li {
+    margin: 0.6rem;
+}
+
+img {
+    grid-row: 1;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 7em 0em 25rem;
+    width: 20em;
 }
