@@ -18,15 +18,19 @@ body {
     margin: 0 auto;
     overflow-x: hidden;
     background-color: var(--background-color);
-    background-image: radial-gradient(circle at 50% -25%, #BCBDC0 -10%, transparent 20%),
-    radial-gradient(circle at -10% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
-    radial-gradient(circle at -15% 30%, rgba(0, 214, 83, 0.2) 10%, transparent 20%),
-    radial-gradient(circle at -15% 60%, #BCBDC0 -20%, transparent 20%),
-    radial-gradient(circle at 120% -20%, #334E58 0%, transparent 30%),
-    url('images/Noise & Texture.png');
+    background-image:
+    /*radial-gradient(circle at 50% -25%, #BCBDC0 -10%, transparent 20%),*/
+    /*radial-gradient(circle at -10% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),*/
+    /*radial-gradient(circle at -15% 30%, rgba(0, 214, 83, 0.2) 10%, transparent 20%),*/
+    /*radial-gradient(circle at -15% 60%, #BCBDC0 -20%, transparent 20%),*/
+    /*radial-gradient(circle at 120% -20%, #334E58 0%, transparent 30%),*/
+    url('images/MacBook Pro 16_ - 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: var(--font);
     color: var(--text);
 }
+
 
 body::before {
     font-size: 20rem;
