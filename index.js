@@ -25,12 +25,12 @@ navCircle.addEventListener("click", function() {
     hiddenNav.classList.toggle("active");
 
     if (navCircle.classList.contains("active")) {
-        document.body.style.overflow = "hidden";
+        document.body.style.overflowY = "hidden";
     } else {
-        document.body.style.overflow = "auto";
+        document.body.style.overflowY = "scroll";
     }
-
 })
+
 
 const dropdownBtn = document.querySelector(".btn");
 const dropdownContent = document.querySelector(".dropdown-content");
