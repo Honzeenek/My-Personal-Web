@@ -1,6 +1,6 @@
 document.addEventListener('scroll', function() {
     const nav = document.querySelector('nav');
-    if (window.scrollY > 170) { // Adjust the scroll value as needed
+    if (window.scrollY > 50 ) { // Adjust the scroll value as needed
       nav.classList.add('nav-hidden');
       dropdownContent.classList.remove("show");
     } else {
@@ -8,13 +8,29 @@ document.addEventListener('scroll', function() {
     }
   });
 
-document.getElementById('scroll-to-top').addEventListener('click', function(event) {
-    event.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
+document.addEventListener("scroll", function() {
+    const navCircle = document.getElementById("nav-circle");
+    if (window.scrollY > 80 ) {
+        navCircle.classList.remove("nav-circle-hidden");
+    } else {
+        navCircle.classList.add("nav-circle-hidden");
+    }
+})
+
+const navCircle = document.getElementById("nav-circle");
+const hiddenNav = document.querySelector(".off-screen-menu");
+
+navCircle.addEventListener("click", function() {
+    navCircle.classList.toggle("active")
+    hiddenNav.classList.toggle("active");
+
+    if (navCircle.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "auto";
+    }
+
+})
 
 const dropdownBtn = document.querySelector(".btn");
 const dropdownContent = document.querySelector(".dropdown-content");
