@@ -123,7 +123,7 @@ body {
           radial-gradient(circle at -15% 30%, rgba(0, 214, 83, 0.2) 10%, transparent 20%),
           radial-gradient(circle at -15% 60%, #BCBDC0 -20%, transparent 20%),
           radial-gradient(circle at 120% -20%, #334E58 0%, transparent 30%),
-          url('Noise & Texture.png'); /* Add the noise texture image */
+          url('images/Noise & Texture.png'); /* Add the noise texture image */
   font-family: var(--font);
   color: var(--text);
 }
