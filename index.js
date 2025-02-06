@@ -1,3 +1,4 @@
+
 document.addEventListener('scroll', function() {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50 ) { // Adjust the scroll value as needed
@@ -19,6 +20,7 @@ document.addEventListener("scroll", function() {
 
 const navCircle = document.getElementById("nav-circle");
 const hiddenNav = document.querySelector(".off-screen-menu");
+const overlay = document.querySelector("#overlay");
 
 navCircle.addEventListener("click", function() {
     navCircle.classList.toggle("active")
@@ -26,10 +28,12 @@ navCircle.addEventListener("click", function() {
 
     if (navCircle.classList.contains("active")) {
         document.body.style.overflowY = "hidden";
+        overlay.classList.add("visible");
     } else {
         document.body.style.overflowY = "scroll";
+        overlay.classList.remove("visible");
     }
-})
+});
 
 
 const dropdownBtn = document.querySelector(".btn");

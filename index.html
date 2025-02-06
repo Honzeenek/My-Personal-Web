@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/JP.ico"/>
   <link rel="stylesheet" href="reset.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,12 +15,14 @@
 </head>
 
 <body>
+<div id="overlay"></div>
+<!-- Naviation Bar -->
 <nav>
   <ul class="nav-items">
     <li><a href="index.html" id="logo" class="nav-a">JP</a></li>
     <li><a href="index.html" id="scroll-to-top" class="nav-a">Home</a></li>
     <li><a href="about-me.html" class="nav-a">About</a></li>
-    <li><a href="..." class="nav-a">Work</a></li>
+    <li><a href="" class="nav-a">Work</a></li>
     <li>
       <button class="btn">Contact
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
@@ -30,10 +33,12 @@
       </button>
     </li>
   </ul>
+
+<!--  Dropdown menu on navbar -->
   <section class="dropdown-content">
     <div class="articles-container">
       <div class="dropdown-articles">
-        <img class="img-dropdown"  src="images/populated-state.png">
+        <img class="img-dropdown"  src="images/populated-state.png" alt="Password Generator Showcase">
       </div>
       <div class="dropdown-articles"></div>
     </div>
@@ -71,18 +76,33 @@
   </section>
 </nav>
 
+<!-- Side Naviation Bar -->
 <div class="off-screen-menu">
-  <ul>
-    <li>Pepa</li>
-    <li>Eda</li>
-    <li>z DEpa</li>
-  </ul>
+  <section class="menu-items">
+    <h5>navigation</h5>
+    <div class="stripe"></div>
+    <ul>
+      <li>Home</li>
+      <li>Work</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    <div class="socials">
+      <ul>
+        <li>X</li>
+        <li>LinkedIn</li>
+        <li>GitHub</li>
+      </ul>
+    </div>
+  </section>
 
 </div>
 <div id="nav-circle" class="nav-circle-hidden">
   <span class="hamburger-line line-1"></span>
   <span class="hamburger-line line-2"></span>
 </div>
+
+<!-- Hero-->
 <header class="hero-header">
   <h1 id="heading">
       <span id="heading-top">
@@ -97,6 +117,8 @@
       </span>
   </h1>
 </header>
+
+<!-- About section -->
 <main>
   <section class="about-section">
     <img src="images/IMG_2890-min.JPEG" alt="Jan Páleník">
